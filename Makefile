@@ -8,4 +8,4 @@ example1:
 	fpc 01_Kreisumfang.pas $(FLAGS) -o$(builddir)01_Kreisumfang
 		
 clean:
-	$(RM) *.o
+	$(RM) $(builddir)*
