@@ -22,3 +22,5 @@ Begin
   Umfang := 2.0 * PI * Radius ; { real is assignd with :=}
   Writeln ('Der Umfang betraegt: ', Umfang );
 end. {Kreisumfang}
+
+{end of program is 'end.' don't forget the point!'}
