@@ -1,6 +1,5 @@
 RM = rm -f
 FLAGS =  -Cr -O1 -gv -gw -g -vw
-
 builddir = ./build/
 
 all: example1 example3  
@@ -13,6 +12,9 @@ example3:
 
 	fpc 03_EuroBetrag3.pas $(FLAGS) -o$(builddir)03_EuroBetrag3
 
+example5:
+
+	fpc 05_Dreiecke.pas $(FLAGS) -o$(builddir)05_Dreieck
 
 clean:
 	$(RM) $(builddir)*
