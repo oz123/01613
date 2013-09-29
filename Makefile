@@ -1,20 +1,17 @@
 RM = rm -f
 FLAGS =  -Cr -O1 -gv -gw -g -vw
 builddir = ./build/
+TD = ./tasks/
+SHELL := /bin/bash
 
-all: example1 example3  
+targets=$(shell for file in `find . -maxdepth 1 -name '*.pas' -type f -printf "%f\n" | \
+		  sed 's/\..*/\.exe/'`; do echo "$$file "; done;)
 
-example1:  
+all: $(targets)
 
-	fpc 01_Kreisumfang.pas $(FLAGS) -o$(builddir)01_Kreisumfang
-		
-example3:
-
-	fpc 03_EuroBetrag3.pas $(FLAGS) -o$(builddir)03_EuroBetrag3
-
-example5:
-
-	fpc 05_Dreiecke.pas $(FLAGS) -o$(builddir)05_Dreieck
+%.exe:%.pas
+	fpc $< $(FLAGS) -o$(builddir)$@
 
 clean:
 	$(RM) $(builddir)*
+
