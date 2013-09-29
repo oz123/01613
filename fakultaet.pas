@@ -3,7 +3,7 @@
 {$B+}
 {$R+}
 
-program Quadratzahl2(input, output);
+program Fakultaet(input, output);
 { berechnet die Fakultaet einer einzulesenden natuerlichen
   Zahl  
   example 4.1.1.2 page 83}
