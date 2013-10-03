@@ -25,7 +25,7 @@ begin
     writeln('Type a number:');
     readln (Zahl);
   until Zahl = 0;
-  if (Minimum = maxint) and (Zahl = 0) then 
+  if (Minimum = maxint) then 
     writeln('Only a 0 was given')
   else 
     writeln('Die kleinste Zahl lautet ', Minimum, '.')
