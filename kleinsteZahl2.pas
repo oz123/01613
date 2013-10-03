@@ -2,7 +2,7 @@
 {$B+}
 {$R+}
 
-program kleinsteZahl1(input, output);
+program kleinsteZahl2(input, output);
 { gibt die kleinste Zahl der Integer Eingabezahlen aus
 example 4.1.2.1 page 86}
 
@@ -14,15 +14,15 @@ begin
   writeln('Geben Sie die integer-Zahlen ein. 0 beendet die Eingabe.');
   readln(Zahl);
   Minimum := Zahl ;
-    while Zahl <> 0 do
-    begin
+  if Zahl <> 0 then
+    repeat
       if Zahl < Minimum then
         Minimum := Zahl ; 
-    readln (Zahl)
-    end;
-    if Minimum <> 0 then
-      writeln('Die kleinste Zahl lautet ', Minimum, '.')
-    else
-      writeln('Es wurde nuer eine 0 eingegeben.')
-end. {end kleinsteZahl1}
+      readln (Zahl)
+    until Zahl = 0;
+  if Minimum <> 0 then
+    writeln('Die kleinste Zahl lautet ', Minimum, '.')
+  else
+    writeln('Es wurde nuer eine 0 eingegeben.')
+end. {end kleinsteZahl2}
 
