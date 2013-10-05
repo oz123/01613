@@ -20,7 +20,7 @@ example 4.1.1.3 page 84}
 
 
  begin 
-   writeln('Geben Sie', ANZ, ' ganze Zahlen ein, ');
+   writeln('Geben Sie ', ANZ, ' ganze Zahlen ein, ');
    writeln('deren Maximum bestimmt werden soll.');
    write ('1. Wert: ');
    readln(Zahl);
