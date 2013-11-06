@@ -53,18 +53,19 @@ begin
   writeln('Test Case A');
   unten := 1;
   oben := FELDGROESSE;
-  gefunden := false;
+  {gefunden := false;}
   repeat
     Mitte := (oben + unten) div 2;
-  if Suchwert = Feld[Mitte] then
+    if Suchwert > Feld[Mitte] then
+      unten := Mitte + 1 
+    else
+      oben := Mitte - 1
+  until (Feld[Mitte] = Suchwert) or (unten > oben);
+  
+  if Feld[Mitte] = Suchwert then
     gefunden := true
   else
-    if Suchwert > Feld[Mitte] then
-      unten := Mitte
-    else
-      oben := Mitte
-      
-until gefunden or (unten >= oben);
+    gefunden := false;
 
   { end of test case A}
   { case B }
